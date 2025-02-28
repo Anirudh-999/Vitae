@@ -1,0 +1,208 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5fdf0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    padding: 0px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 15px 20px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar ul li a:hover {
+    width: 40px;
+    background-color: hsl(125, 88%, 90%); 
+    color: #005634; 
+    border-radius: 5px; 
+}
+
+.navbar .active {
+    color: rgb(45, 94, 0);
+}
+
+/* Logo Size */
+.navbar .logo img {
+    max-width: 130px; /* Increase the maximum width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px;
+    background-color: #C1FF72;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+}
+
+.hero-content .subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.hero-content .cta-button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #7ed957, #007e50); /* Linear gradient from #7ed957 to #007e50 */
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 15px; /* Optional: Add border radius for rounded corners */
+}
+
+.hero-image img {
+    width: 600px;
+}
+
+/* Features Section */
+
+.features-title{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #C1FF72;
+    color:#005634;
+
+}
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 40px;
+    background-color: #C1FF72;
+}
+
+.feature-card {
+    background: linear-gradient(180deg, #7ed957, #009961);
+    padding: 50px 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+.feature-card p{
+    padding: 20px;
+    font-size: 20px;
+    color: #f5fdf0;
+}
+.feature-card img {
+    width: 250px;
+    height: auto;
+}
+
+/* FitScale Section */
+.fitscale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #C1FF72;
+}
+
+.fitscale h2{
+    font-size: 50px ;
+    padding: 10px;
+}
+.fitscale .fitscale-content .subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+    padding: 10px;
+}
+.fitscale-content {
+    max-width: 50%;
+}
+
+.fitscale .cta-button {
+    margin-top: 10px;
+    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: #ff5757;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff; /* Match the background color */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-content {
+    font-size: 15px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between left and right */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space between content and copyright */
+}
+
+.contact-info {
+    text-align: left; /* Align text to the left */
+}
+
+.socials {
+    margin-left: auto; /* Push socials to the right */
+}
+
+.social-link {
+    margin: 10px 40px; /* Space between social links */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    color: #007e50; /* Match the theme color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-link:hover {
+    color: #5cb85c; /* Change color on hover */
+}

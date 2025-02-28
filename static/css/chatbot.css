@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C1FF72; /* Match the background color */
+    margin: 0;
+    padding: 20px;
+}
+
+.chat-container {
+    margin: auto;
+    background: #C1FF72;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#chat-box {
+    height: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message {
+    max-width: 200px;
+    padding: 12px;
+    background-color: #ffffff; /* White background for messages */
+    margin: 10px 0; /* Space between messages */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+}
+
+.user-message {
+    align-self: flex-end;
+    padding: 12px;
+    margin: 10px;
+    max-width: fit-content;
+    background-color: #ffffff; /* White background for messages */
+    margin: 10px 0; /* Space between messages */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    color: #000000;
+}
+
+.bot-message {
+    padding: 20px;
+    align-self: flex-start; /* Align LLM messages to the left */
+    color: #007bff; /* Optional: LLM message color */
+}
+
+.input-group {
+    padding: 20px;
+    display: flex;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+} 

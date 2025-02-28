@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitae - Health Empowerment</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <style>
+        .flash-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1000;
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{url_for('blog')}}">Blog</a></li>
+                <li><a href="{{url_for('chatbot')}}">Assistant</a></li>
+                <li><a href="{{url_for('login')}}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="flash-message" class="flash-message"></div>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var flashMessage = document.getElementById('flash-message');
+              flashMessage.innerText = "{{ messages[0] }}";
+              flashMessage.style.display = 'block';
+
+              setTimeout(function() {
+                  flashMessage.style.display = 'none';
+              }, 1500);
+          });
+      </script>
+    {% endif %}
+    {% endwith %}
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vitaè</h1>
+            <p class="subtitle">Empowering you to take control of your health.</p>
+            <p>Vitae provides free, easy-to-understand courses on essential health topics, empowering users with crucial 
+                knowledge. Its helpful chatbot offers instant information and guidance on everyday health concerns, acting as a readily available health companion. 
+                Vitae aims to make health information accessible and actionable, promoting proactive well-being for everyone.</p>
+            <button class="cta-button"><a class="cta-button" href="{{url_for('login')}}" style="text-decoration: none">REGISTER NOW</a></button>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/hero.png') }}" alt="Health Illustration">
+        </div>
+    </section>
+
+    <div class="features-title" ><p>Features</p></div>
+    <!-- Features Section -->
+    <section class="features">
+        
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/online.png') }}" alt="Online Courses">
+            <p>Want to learn something new and valuable? Get certified in basic medical principles with our free online courses.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/news.png') }}" alt="Healthcare Updates">
+            <p>Want to know what's next in healthcare? Read the latest news articles on future advancements in the health industry.</p>
+        </div>
+        <div class="feature-card">
+            <img src="{{ url_for('static', filename='images/chatbot.png') }}" alt="Health Assistant">
+            <p>Get the answers you need on medical and learn to live healthier. Use our personal health assistant for expert guidance.</p>
+        </div>
+    </section>
+
+    <!-- FitScale Section -->
+    <section class="fitscale">
+        <div class="fitscale-content">
+            <h2>FitScale</h2>
+            <p class="subtitle">Curious to know how fit you are compared to the world?</p>
+            <p>Discover your fitness level and compare it globally. Calculate your FitScore with just a few details.</p>
+            <button class="cta-button">MEASURE FITSCORE</button>
+        </div>
+        <div class="fitscale-image">
+            <img src="{{ url_for('static', filename='images/fitscale.png') }}" alt="FitScale Chart">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact Us: (123) 456-7890</p>
+                <p>Address: 123 Health St, Wellness City, HC 12345</p>
+            </div>
+            <div class="socials">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+        <p>&copy; 2023 Vitae. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

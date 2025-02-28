@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Vitae</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li class="active  "><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li><a href="{{url_for('blog')}}">Blog</a></li>
+                <li><a href="{{url_for('chatbot')}}">Assistant</a></li>
+                <li><a href="{{url_for('login')}}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" id="search" class="search-input" placeholder="🔍  Search courses...">
+        
+        <select id="topic">
+            <option value="">Topic</option>
+            <option value="cpr">CPR</option>
+            <option value="firstaid">First Aid</option>
+            <option value="foodhygiene">Food Hygiene</option>
+        </select>
+        
+        <select id="duration">
+            <option value="">Duration</option>
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+        </select>
+        
+        <select id="level">
+            <option value="">Level</option>
+            <option value="beginner">Beginner</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </section>
+
+    <section class="courses">
+        <h2>BEGINNER</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/cpr.png') }}" alt="Learn CPR">
+                <h3>Learn CPR</h3>
+                <p>This is a life-saving technique used when someone's heart has stopped beating.</p>
+            </div>
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/firstaid.png') }}" alt="FirstAid">
+                <h3>FirstAid</h3>
+                <p>This includes knowing how to handle common injuries like cuts, burns, and sprains.</p>
+            </div>
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/food.png') }}" alt="Food Hygiene">
+                <h3>Food Hygiene</h3>
+                <p>Practice safe food handling, including washing, cooking, and storing food properly.</p>
+            </div>
+            <div class="view-all">
+                <p>VIEW ALL →</p>
+            </div>
+        </div>
+
+        <h2>ADVANCED</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/trauma.png') }}" alt="Trauma Support">
+                <h3>Trauma Support</h3>
+                <p>Rapid assessment and stabilization of life-threatening injuries.</p>
+            </div>
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/ctscan.png') }}" alt="Diagnostic Interpretation">
+                <h3>Diagnostic Interpretation</h3>
+                <p>X-Ray, CT scans, MRI scans, and basic radiology.</p>
+            </div>
+            <div class="course-card">
+                <img src="{{ url_for('static', filename='images/cardiac.png') }}" alt="Cardiac Support">
+                <h3>Cardiac Support</h3>
+                <p>This builds upon basic CPR and includes advanced techniques.</p>
+            </div>
+            <div class="view-all">
+                <p>VIEW ALL →</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact Us: (123) 456-7890</p>
+                <p>Address: 123 Health St, Wellness City, HC 12345</p>
+            </div>
+            <div class="socials">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+        <p>&copy; 2023 Vitae. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Vitae</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+    <script defer src="static/js/blog.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo"></div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="{{ url_for('courses') }}">Courses</a></li>
+                <li class="active"><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="{{ url_for('chatbot') }}">Assistant</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" id="search" class="search-input" placeholder="🔍  Search blog posts...">
+        
+        <select id="category">
+            <option value="">Category</option>
+            <option value="news">News</option>
+            <option value="research">Research</option>
+            <option value="updates">Updates</option>
+        </select>
+        
+        <select id="date">
+            <option value="">Date</option>
+            <option value="last_week">Last Week</option>
+            <option value="last_month">Last Month</option>
+            <option value="last_year">Last Year</option>
+        </select>
+    </section>
+
+    <section class="blog">
+        <h2>Latest Newsletters and Research Breakthroughs</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3>Newsletter #1: Health Innovations</h3>
+                <p>Explore the latest innovations in health technology and how they are transforming patient care.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Research Breakthrough: New Vaccine Development</h3>
+                <p>Discover the recent breakthroughs in vaccine research that promise to enhance public health.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Newsletter #2: Nutrition Insights</h3>
+                <p>Learn about the latest findings in nutrition science and how they can impact your health.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Research Breakthrough: AI in Healthcare</h3>
+                <p>Understand how artificial intelligence is being utilized to improve healthcare outcomes.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Newsletter #3: Mental Health Awareness</h3>
+                <p>Discuss the importance of mental health and the latest strategies for promoting well-being.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Research Breakthrough: Gene Therapy Advances</h3>
+                <p>Explore the latest advancements in gene therapy and their implications for treatment.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Newsletter #4: Fitness Trends</h3>
+                <p>Stay updated on the latest trends in fitness and how they can enhance your health.</p>
+                <button class="read-more">Read More</button>
+            </div>
+            <div class="blog-card">
+                <h3>Research Breakthrough: Telemedicine Growth</h3>
+                <p>Learn about the rapid growth of telemedicine and its impact on healthcare delivery.</p>
+                <button class="read-more">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>Contact Us: (123) 456-7890</p>
+                <p>Address: 123 Health St, Wellness City, HC 12345</p>
+            </div>
+            <div class="socials">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </div>
+        <p>&copy; 2023 Vitae. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
